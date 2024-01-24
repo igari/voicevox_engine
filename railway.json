@@ -1,0 +1,10 @@
+{
+  "$schema": "https://schemas.railway.app/railway.schema.json",
+  "build": {
+    "builder": "DOCKERFILE"
+  },
+  "deploy": {
+    "startCommand": "gosu user /opt/python/bin/python3 /opt/voicevox_engine/run.py --voicelib_dir \"/opt/voicevox_core/\" --runtime_dir \"/opt/onnxruntime/lib\" --host \"0.0.0.0\"",
+    "restartPolicyType": "NEVER"
+  }
+}
